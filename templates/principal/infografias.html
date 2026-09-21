@@ -1,0 +1,72 @@
+{% extends 'principal/base.html' %}
+
+{% block title %}Infografías{% endblock %}
+
+{% block content %}
+
+<section class="pagina-infografias">
+
+    <div class="encabezado-ia">
+
+        <span class="etiqueta">
+            RECURSOS VISUALES
+        </span>
+
+        <h2>Infografías</h2>
+
+        <p>
+            Infografías relacionadas con la
+            Inteligencia Artificial y su clasificación clásica.
+        </p>
+
+    </div>
+
+
+    <div class="contenedor-infografias">
+
+        {% for infografia in infografias %}
+
+        <article class="infografia-card">
+
+            {% if infografia.imagen %}
+
+                <img
+                    src="{{ infografia.imagen.url }}"
+                    alt="{{ infografia.titulo }}"
+                >
+
+            {% endif %}
+
+
+            <div class="infografia-contenido">
+
+                <h3>
+                    {{ infografia.titulo }}
+                </h3>
+
+                {% if infografia.descripcion %}
+
+                    <p>
+                        {{ infografia.descripcion }}
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+        </article>
+
+        {% empty %}
+
+        <p class="sin-infografias">
+            Todavía no hay infografías registradas.
+        </p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}
+```

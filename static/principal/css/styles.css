@@ -1,0 +1,658 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #222;
+}
+
+/* Barra de navegación */
+
+.navbar {
+    background-color: #101828;
+    color: white;
+    padding: 20px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido */
+
+main {
+    min-height: 70vh;
+}
+
+.inicio {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.inicio h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Pie de página */
+
+footer {
+    background-color: #101828;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* Página de Inteligencia Artificial */
+
+.pagina-ia {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 30px 90px;
+}
+
+
+/* Encabezado */
+
+.encabezado-ia {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 65px;
+}
+
+.etiqueta {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #0067b8;
+    margin-bottom: 15px;
+}
+
+.encabezado-ia h2 {
+    font-size: 48px;
+    margin-bottom: 18px;
+    color: #101828;
+}
+
+.encabezado-ia p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #667085;
+}
+
+
+/* Definición */
+
+.definicion-ia {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(16, 24, 40, 0.07);
+
+    margin-bottom: 75px;
+}
+
+.numero-seccion {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #101828;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.definicion-ia h3 {
+    font-size: 28px;
+    color: #101828;
+    margin-bottom: 18px;
+}
+
+.definicion-ia p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #475467;
+}
+
+
+/* Sección de tipos */
+
+.seccion-tipos {
+    margin-top: 20px;
+}
+
+.titulo-seccion {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+.titulo-seccion > span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0067b8;
+    padding-top: 6px;
+}
+
+.titulo-seccion h3 {
+    font-size: 32px;
+    color: #101828;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion p {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Tarjetas */
+
+.tipos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tipo-card {
+    background-color: white;
+
+    padding: 32px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tipo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.10);
+}
+
+.card-numero {
+    font-size: 13px;
+    font-weight: bold;
+    color: #0067b8;
+    margin-bottom: 20px;
+}
+
+.tipo-card h4 {
+    font-size: 23px;
+    color: #101828;
+    margin-bottom: 15px;
+}
+
+.linea-card {
+    width: 40px;
+    height: 3px;
+
+    background-color: #0067b8;
+
+    margin-bottom: 20px;
+}
+
+.tipo-card p {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.sin-datos {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #667085;
+}
+
+
+/* Adaptación para pantallas pequeñas */
+
+@media (max-width: 800px) {
+
+    .pagina-ia {
+        padding: 50px 20px;
+    }
+
+    .encabezado-ia h2 {
+        font-size: 38px;
+    }
+
+    .tipos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .definicion-ia {
+        padding: 30px;
+    }
+}
+
+/* ==================================
+   PÁGINA LÍNEA DEL TIEMPO
+  */
+
+.pagina-linea-tiempo {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 70px 30px 90px;
+}
+
+.pagina-linea-tiempo .encabezado-ia {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 55px;
+}
+
+.contenedor-linea-tiempo {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 25px rgba(16, 24, 40, 0.08);
+}
+
+.contenedor-linea-tiempo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* =========================================
+   PÁGINA INFOGRAFÍAS
+ */
+
+.pagina-infografias {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 70px 30px 90px;
+}
+
+.pagina-infografias .encabezado-ia {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 55px;
+}
+
+/* Contenedor de las infografías */
+
+.contenedor-infografias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Tarjeta */
+
+.infografia-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(16, 24, 40, 0.08);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.infografia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.12);
+}
+
+/* Imagen */
+
+.infografia-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Información */
+
+.infografia-contenido {
+    padding: 25px;
+}
+
+.infografia-contenido h3 {
+    font-size: 23px;
+    color: #101828;
+    margin-bottom: 12px;
+}
+
+.infografia-contenido p {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Cuando no hay infografías */
+
+.sin-infografias {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #667085;
+    padding: 40px;
+}
+
+/* Adaptación para pantallas pequeñas */
+
+@media (max-width: 900px) {
+
+    .contenedor-infografias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .pagina-infografias {
+        padding: 50px 20px;
+    }
+
+    .contenedor-infografias {
+        grid-template-columns: 1fr;
+    }
+
+    .infografia-card img {
+        height: auto;
+        max-height: 500px;
+    }
+}
+
+
+/* =========================================
+   PÁGINA CONCEPTOS*/
+
+.pagina-conceptos {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 70px 30px 90px;
+}
+
+.pagina-conceptos .encabezado-ia {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 55px;
+}
+
+.contenedor-conceptos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.concepto-card {
+    background-color: white;
+    padding: 32px;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.concepto-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.10);
+}
+
+.concepto-numero {
+    font-size: 13px;
+    font-weight: bold;
+    color: #0067b8;
+
+    margin-bottom: 20px;
+}
+
+.concepto-card h3 {
+    font-size: 23px;
+    color: #101828;
+
+    margin-bottom: 15px;
+}
+
+.concepto-card .linea-card {
+    width: 40px;
+    height: 3px;
+
+    background-color: #0067b8;
+
+    margin-bottom: 20px;
+}
+
+.concepto-card p {
+    color: #667085;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.sin-conceptos {
+    grid-column: 1 / -1;
+
+    text-align: center;
+    color: #667085;
+
+    padding: 40px;
+}
+
+@media (max-width: 900px) {
+
+    .contenedor-conceptos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .pagina-conceptos {
+        padding: 50px 20px;
+    }
+
+    .contenedor-conceptos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================
+   PÁGINA INICIO
+*/
+
+.pagina-inicio {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 30px 90px;
+}
+
+.pagina-inicio .encabezado-ia {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 65px;
+}
+
+
+/* Opciones del contenido */
+
+.inicio-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.inicio-opcion {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.inicio-opcion:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.10);
+}
+
+
+/* Número */
+
+.inicio-opcion > span {
+    min-width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #101828;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Texto */
+
+.inicio-opcion h4 {
+    font-size: 21px;
+
+    color: #101828;
+
+    margin-bottom: 10px;
+}
+
+.inicio-opcion p {
+    color: #667085;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* Fuentes */
+
+.inicio-fuentes {
+    margin-top: 75px;
+
+    background-color: white;
+
+    padding: 35px 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(16, 24, 40, 0.07);
+}
+
+.inicio-fuentes .etiqueta {
+    margin-bottom: 10px;
+}
+
+.inicio-fuentes h3 {
+    font-size: 27px;
+
+    color: #101828;
+
+    margin-bottom: 15px;
+}
+
+.inicio-fuentes p {
+    color: #667085;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .pagina-inicio {
+        padding: 50px 20px;
+    }
+
+    .inicio-menu {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio-fuentes {
+        padding: 30px;
+    }
+
+}

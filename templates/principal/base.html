@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Inteligencia Artificial{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'principal/css/styles.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>Inteligencia Artificial</h1>
+
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'ia' %}">IA</a></li>
+                <li><a href="{% url 'linea_tiempo' %}">Línea del tiempo</a></li>
+                <li><a href="{% url 'infografias' %}">Infografías</a></li>
+                <li><a href="{% url 'conceptos' %}">Conceptos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2026 Yaret Vanessa Hernández Cubas</p>
+        <p>Proyecto académico - Inteligencia Artificial</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

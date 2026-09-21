@@ -1,0 +1,80 @@
+{% extends 'principal/base.html' %}
+
+{% block title %}Inteligencia Artificial{% endblock %}
+
+{% block content %}
+
+<section class="pagina-ia">
+
+    <div class="encabezado-ia">
+        <span class="etiqueta">FUNDAMENTOS DE IA</span>
+
+        <h2>Inteligencia Artificial</h2>
+    </div>
+
+
+    <div class="definicion-ia">
+
+        <div class="numero-seccion">
+            01
+        </div>
+
+        <div>
+            <h3>¿Qué es la Inteligencia Artificial?</h3>
+
+            <p>
+                La Inteligencia Artificial es un campo interdisciplinario dedicado al diseño de sistemas capaces de realizar tareas asociadas con la inteligencia humana, como aprender, razonar, reconocer patrones, comprender lenguaje, resolver problemas y tomar decisiones.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="seccion-tipos">
+
+        <div class="titulo-seccion">
+            <span>02</span>
+
+            <div>
+                <h3>Tipos de Inteligencia Artificial</h3>
+                <p>
+                    La IA puede clasificarse de acuerdo con sus capacidades
+                    y el nivel de inteligencia que presenta.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="tipos-container">
+
+            {% for tipo in tipos %}
+
+            <article class="tipo-card">
+
+                <div class="card-numero">
+                    {{ forloop.counter|stringformat:"02d" }}
+                </div>
+
+                <h4>{{ tipo.nombre }}</h4>
+
+                <div class="linea-card"></div>
+
+                <p>{{ tipo.definicion }}</p>
+
+            </article>
+
+            {% empty %}
+
+            <p class="sin-datos">
+                Todavía no hay tipos de Inteligencia Artificial registrados.
+            </p>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

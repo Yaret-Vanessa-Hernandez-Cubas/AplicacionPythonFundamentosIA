@@ -1,0 +1,55 @@
+{% extends 'principal/base.html' %}
+
+{% block title %}Conceptos de IA{% endblock %}
+
+{% block content %}
+
+<section class="pagina-conceptos">
+
+    <div class="encabezado-ia">
+
+        <span class="etiqueta">
+            FUNDAMENTOS DE IA
+        </span>
+
+        <h2>Conceptos</h2>
+
+        <p>
+            Conceptos fundamentales relacionados con la Inteligencia Artificial
+        </p>
+
+    </div>
+
+    <div class="contenedor-conceptos">
+
+        {% for concepto in conceptos %}
+
+        <article class="concepto-card">
+
+            <div class="concepto-numero">
+                {{ forloop.counter|stringformat:"02d" }}
+            </div>
+
+            <h3>{{ concepto.nombre }}</h3>
+
+            <div class="linea-card"></div>
+
+            <p>
+                {{ concepto.definicion }}
+            </p>
+
+        </article>
+
+        {% empty %}
+
+        <p class="sin-conceptos">
+            Todavía no hay conceptos registrados.
+        </p>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

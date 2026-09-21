@@ -1,0 +1,134 @@
+{% extends 'principal/base.html' %}
+
+{% block title %}Inicio | Inteligencia Artificial{% endblock %}
+
+{% block content %}
+
+<section class="pagina-inicio">
+
+    <div class="encabezado-ia">
+
+        <span class="etiqueta">
+            FUNDAMENTOS DE IA
+        </span>
+
+        <h2>Inteligencia Artificial</h2>
+
+        <p>
+            Un recorrido por los fundamentos, conceptos,
+            evolución y aplicaciones de la Inteligencia Artificial.
+        </p>
+
+    </div>
+
+
+    <div class="seccion-tipos">
+
+        <div class="titulo-seccion">
+
+            <div>
+
+                <h3>Contenido del proyecto</h3>
+
+                <p>
+                    Explora las diferentes secciones para conocer
+                    más sobre la Inteligencia Artificial.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="inicio-menu">
+
+            <a href="{% url 'ia' %}" class="inicio-opcion">
+
+                <span>01</span>
+
+                <div>
+                    <h4>Inteligencia Artificial</h4>
+
+                    <p>
+                        Definición y los principales tipos de IA.
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="{% url 'linea_tiempo' %}" class="inicio-opcion">
+
+                <span>02</span>
+
+                <div>
+                    <h4>Línea del tiempo</h4>
+
+                    <p>
+                        Acontecimientos importantes
+                        en la evolución de la IA.
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="{% url 'infografias' %}" class="inicio-opcion">
+
+                <span>03</span>
+
+                <div>
+                    <h4>Infografías</h4>
+
+                    <p>
+                        Recursos visuales relacionados
+                        con la Inteligencia Artificial.
+                    </p>
+                </div>
+
+            </a>
+
+
+            <a href="{% url 'conceptos' %}" class="inicio-opcion">
+
+                <span>04</span>
+
+                <div>
+                    <h4>Conceptos</h4>
+
+                    <p>
+                        Glosario con conceptos
+                        fundamentales de IA.
+                    </p>
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- FUENTES -->
+
+    <div class="inicio-fuentes">
+
+        <span class="etiqueta">
+            FUENTES
+        </span>
+
+        <h3>Información consultada</h3>
+
+        <p>
+            El contenido de este proyecto fue elaborado con base en
+            información consultada en IBM Think (2026) y en el libro
+            <em>Inteligencia Artificial</em> de Ponce Gallegos et al.
+            (2014), publicado por la Iniciativa Latinoamericana de
+            Libros de Texto Abiertos (LATIn).
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}
